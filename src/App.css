@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 180px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+
+  background-color: #52acff;
+  background-image: linear-gradient(180deg, #52acff 25%, #ffe32c 100%);
+}
+
+.container > h1 {
+  color: #111;
+}
+.game-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.board-row {
+  margin-right: 50px;
+}
+
+.board-row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+  height: 40px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+  text-shadow: 1px 2px 2px #ce5937;
+  cursor: pointer;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.history span {
+  font-weight: 700;
+}
+.history li {
+  list-style: none;
+}
+
+.history ul {
+  position: relative;
+  left: -20px;
+}
+
+.btn-restart {
+  width: 100px;
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: #ff9a8b;
+  background-image: linear-gradient(
+    90deg,
+    #ff9a8b 0%,
+    #ff6a88 55%,
+    #ff99ac 100%
+  );
+
+  border: 1px solid #111;
+  border-radius: 5px;
+}
